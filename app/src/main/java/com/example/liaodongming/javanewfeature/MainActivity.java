@@ -17,13 +17,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        testingReflection();
+//        testingReflection();
+//
+//        try {
+//            doRegular();
+//            doReflection();
+//        } catch (Exception e) {
+//            //do nothing
+//            e.printStackTrace();
+//        }
 
+        MySampleAnnotationClient mySampleAnnotationClient = new MySampleAnnotationClient();
         try {
-            doRegular();
-            doReflection();
-        } catch (Exception e) {
-            //do nothing
+            Method m = mySampleAnnotationClient.getClass().getMethod("myMethod");
+            MySampleAnnotation mySampleAnnotation = m.getAnnotation(MySampleAnnotation.class);
+            Log.d(TAG, "name is: " + mySampleAnnotation.name() + " age is: " + mySampleAnnotation.age());
+        } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
     }
