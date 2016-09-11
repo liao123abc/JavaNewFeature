@@ -1,4 +1,4 @@
-package com.example.liaodongming.javanewfeature;
+package com.example.liaodongming.javanewfeature.Annotation.simple;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

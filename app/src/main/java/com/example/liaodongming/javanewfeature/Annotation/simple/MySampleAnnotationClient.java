@@ -1,11 +1,10 @@
-package com.example.liaodongming.javanewfeature;
+package com.example.liaodongming.javanewfeature.Annotation.simple;
 
 import android.util.Log;
 
 /**
  * Created by liaodongming on 2016/9/4.
  */
-
 public class MySampleAnnotationClient {
 
     @MySampleAnnotation(name="Alice", age=29)
