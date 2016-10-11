@@ -9,7 +9,6 @@ import java.lang.annotation.RetentionPolicy;
 /**
  * Created by liaodongming on 2016/9/11.
  */
-
 public class RepeatingAnnotations {
 
     private static final String TAG = RepeatingAnnotations.class.getSimpleName();
