@@ -35,7 +35,7 @@ public class Test {
     }
 
     /**
-     * not use Anonymous Class
+     * not use Anonymous Class, not lambda
      * @param roster
      */
     public static void noAnonymousSearch(List<Person> roster) {
@@ -43,7 +43,7 @@ public class Test {
     }
 
     /**
-     *  use Anonymous Class
+     *  use Anonymous Class, not lambda
      */
     public static void useAnonymousSearch(List<Person> roster) {
         printPersons(
@@ -62,10 +62,16 @@ public class Test {
      * wow! use Lambda
      */
     public static void useLambda(List<Person> roster) {
+        /**
+         * A functional interface may contain
+         * one or more default methods or static methods
+         * 只有一个抽象方法
+         */
         printPersons(roster, (Person p) -> p.getGender() == Person.Sex.MALE);
     }
 
     static class CheckPersonEligibleForSelectiveService implements CheckPerson {
+
         public boolean test(Person p) {
             return p.gender == Person.Sex.MALE &&
                     p.getAge() >= 18 &&
