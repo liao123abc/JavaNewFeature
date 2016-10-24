@@ -70,6 +70,15 @@ public class Test {
         printPersons(roster, (Person p) -> p.getGender() == Person.Sex.MALE);
     }
 
+    public static void useLambda2(List<Person> roster) {
+        /**
+         * A functional interface may contain
+         * one or more default methods or static methods
+         * 只有一个抽象方法
+         */
+        printPersons(roster, p -> p.name.equals("hello"));//p represents an instance of the Person class
+    }
+
     static class CheckPersonEligibleForSelectiveService implements CheckPerson {
 
         public boolean test(Person p) {
