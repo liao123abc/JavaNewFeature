@@ -7,6 +7,7 @@ import android.util.Log;
 import com.example.liaodongming.javanewfeature.Annotation.repeatable.RepeatingAnnotations;
 import com.example.liaodongming.javanewfeature.Annotation.simple.MySampleAnnotation;
 import com.example.liaodongming.javanewfeature.Annotation.simple.MySampleAnnotationClient;
+import com.example.liaodongming.javanewfeature.Lambda.PredicateEx.TestEmployeePredicates;
 
 import java.lang.reflect.Method;
 
@@ -19,7 +20,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        RepeatingAnnotations test = new RepeatingAnnotations();
-        test.test();
+//        RepeatingAnnotations test = new RepeatingAnnotations();
+//        test.test();
+
+        TestEmployeePredicates.test();
     }
 }
