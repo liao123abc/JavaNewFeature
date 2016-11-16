@@ -28,4 +28,14 @@ public class EmployeePredicates {
     public static List<Employee> filterEmployees (List<Employee> employees, Predicate<Employee> predicate) {
         return employees.stream().filter( predicate ).collect(Collectors.<Employee>toList());
     }
+
+    public static List<Employee> filterEmployees (List<Employee> employees,
+                                                  Predicate<Employee> predicate,
+                                                  Predicate<Employee> predicate1) {
+        return employees.stream().filter( predicate.and(predicate1)).collect(Collectors.<Employee>toList());
+    }
+
+    public static List<Employee> filterEmployees2 (List<Employee> employees, Predicate<Employee> predicate) {
+        return employees.stream().filter( predicate.negate() ).collect(Collectors.<Employee>toList());
+    }
 }
