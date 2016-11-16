@@ -1,25 +1,21 @@
 package com.example.liaodongming.javanewfeature.DefautStatic.WithDefault;
 
 /**
- * Created by Administrator on 2016/10/7.
+ * Created by liaodongming on 2016/10/7.
  */
 
 public interface DoMany {
 
     default public void methodA1() {
-
     }
 
     default public void methodA2() {
-
     }
 
     default public void methodB1() {
-
     }
 
     default public void methodB2() {
-
     }
 
     /**
@@ -30,7 +26,5 @@ public interface DoMany {
      *
      */
 //    default void toString() {
-//
 //    }
-
 }
