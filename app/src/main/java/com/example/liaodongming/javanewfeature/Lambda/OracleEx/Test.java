@@ -67,7 +67,8 @@ public class Test {
          * one or more default methods or static methods
          * 只有一个抽象方法
          */
-        printPersons(roster, (Person p) -> p.getGender() == Person.Sex.MALE);
+        printPersons(roster, (Person p) ->
+                p.getGender() == Person.Sex.MALE && p.getAge() >= 18 && p.getAge() <= 25);
     }
 
     public static void useLambda2(List<Person> roster) {
@@ -80,7 +81,6 @@ public class Test {
     }
 
     static class CheckPersonEligibleForSelectiveService implements CheckPerson {
-
         public boolean test(Person p) {
             return p.gender == Person.Sex.MALE &&
                     p.getAge() >= 18 &&
